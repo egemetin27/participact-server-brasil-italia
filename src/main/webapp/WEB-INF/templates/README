@@ -1,0 +1,6 @@
+ESTRTUTURA DO TEMPLATES/LAYOUTS
+
+1.0			Paginas antigas, que não estão mais sendo utilizada e devem ser removidas posteriomente.
+layout		Contém os templates principais do sistema, usado internamente quando logado
+login		Somente as paginas externas, sem o usuário logado
+partial		Paginas compartilhadas entre todos os templates

@@ -1,0 +1,37 @@
+Dear $name$,
+
+We would like to invite you to participate in a scientific research ($task$). 
+
+$description$ 
+
+To conduct the research and data collection, click the link below, please:
+(Android) https://play.google.com/store/apps/details?id=br.udesc.esag.participactbrasil&hl=pt_BR
+(iOS) https://itunes.apple.com/us/app/participact-brasil/id1182950625?ls=1&mt=8
+
+Thank you for taking the time to complete this research. If you have any questions about the research, please contact us at contato[AT]esag.udesc.br .
+
+Configure mobile app
+
+Complete the following steps to configure your mobile app.
+
+1. Install the app for Android or iOS.
+2. In the app, add an account or choose insert token.
+3. Scan the image below.
+
+<p>[[QRCODEIMAGE]]</p>
+
+if you are unable to scan the image, enter the following information in your app.
+
+<p>Token: [[QRCODETOKEN]]</p>
+
+<p>Url: [[QRCODEURL]]</p>
+
+if the app displays a six-digit code, you are done!
+
+
+Regards,
+Carlos Roberto de Rolt
+Centro de Ciências da Administração e Socioeconômicas - ESAG 
+Av. Madre Benvenuta, 2037 - Itacorubí - Florianópolis - SC 
+CEP: 88.035-001 - Telefone (48) 3664-8200
+Universidade do Estado de Santa Catarina (UDESC)

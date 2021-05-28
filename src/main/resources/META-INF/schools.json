@@ -1,0 +1,314 @@
+{
+   "IN0": {
+      "name": "Universidade da Integração Internacional da Lusofonia Afro-Brasileira (UNILAB)"
+   },
+   "IN1": {
+      "name": "Universidade de Pernambuco (UPE)"
+   },
+   "IN2": {
+      "name": "Universidade do Estado da Bahia (UNEB)"
+   },
+   "IN3": {
+      "name": "Universidade do Estado do Rio Grande do Norte (UERN)"
+   },
+   "IN4": {
+      "name": "Universidade Estadual da Paraíba (UEPB)"
+   },
+   "IN5": {
+      "name": "Universidade Estadual de Alagoas (UNEAL)"
+   },
+   "IN6": {
+      "name": "Universidade Estadual de Ciências da Saúde de Alagoas (UNCISAL)"
+   },
+   "IN7": {
+      "name": "Universidade Estadual de Feira de Santana (UEFS)"
+   },
+   "IN8": {
+      "name": "Universidade Estadual de Santa Cruz (UESC)"
+   },
+   "IN9": {
+      "name": "Universidade Estadual do Ceará (UECE)"
+   },
+   "INA": {
+      "name": "Universidade Estadual do Maranhão (UEMA)"
+   },
+   "INB": {
+      "name": "Universidade Estadual do Piauí (UESPI)"
+   },
+   "INC": {
+      "name": "Universidade Estadual do Sudoeste da Bahia (UESB)"
+   },
+   "IND": {
+      "name": "Universidade Estadual Vale do Acaraú (UVA)"
+   },
+   "INE": {
+      "name": "Universidade Federal da Bahia (UFBA)"
+   },
+   "INF": {
+      "name": "Universidade Federal da Paraíba (UFPB)"
+   },
+   "IN10": {
+      "name": "Universidade Federal de Alagoas (UFAL)"
+   },
+   "IN11": {
+      "name": "Universidade Federal de Campina Grande (UFCG)"
+   },
+   "IN12": {
+      "name": "Universidade Federal de Pernambuco (UFPE)"
+   },
+   "IN13": {
+      "name": "Universidade Federal da Região do Cariri (UFCA)"
+   },
+   "IN14": {
+      "name": "Universidade Federal de Sergipe (UFS)"
+   },
+   "IN15": {
+      "name": "Universidade Federal do Ceará (UFC)"
+   },
+   "IN16": {
+      "name": "Universidade Federal do Maranhão (UFMA)"
+   },
+   "IN17": {
+      "name": "Universidade Federal do Piauí (UFPI)"
+   },
+   "IN18": {
+      "name": "Universidade Federal do Recôncavo Baiano (UFRB)"
+   },
+   "IN19": {
+      "name": "Universidade Federal do Rio Grande do Norte (UFRN)"
+   },
+   "IN1A": {
+      "name": "Universidade Federal do Vale do São Francisco (UNIVASF)"
+   },
+   "IN1B": {
+      "name": "Universidade Federal Rural de Pernambuco (UFRPE)"
+   },
+   "IN1C": {
+      "name": "Universidade Federal Rural do Semi-Árido (UFERSA)"
+   },
+   "IN1D": {
+      "name": "Universidade Regional do Cariri (URCA)"
+   },
+   "IN1E": {
+      "name": "Universidade de São Paulo (USP)"
+   },
+   "IN1F": {
+      "name": "Universidade do Estado de Minas Gerais (UEMG)"
+   },
+   "IN20": {
+      "name": "Universidade do Estado do Rio de Janeiro (UERJ)"
+   },
+   "IN21": {
+      "name": "Universidade Estadual da Zona Oeste (UEZO)"
+   },
+   "IN22": {
+      "name": "Universidade Estadual de Campinas (UNICAMP)"
+   },
+   "IN23": {
+      "name": "Universidade Estadual de Montes Claros (UNIMONTES)"
+   },
+   "IN24": {
+      "name": "Universidade Estadual do Norte Fluminense Darcy Ribeiro (UENF)"
+   },
+   "IN25": {
+      "name": "Universidade Estadual Paulista Júlio de Mesquita Filho (UNESP)"
+   },
+   "IN26": {
+      "name": "Universidade Federal de Alfenas (UNIFAL)"
+   },
+   "IN27": {
+      "name": "Universidade Federal de Itajubá (UNIFEI)"
+   },
+   "IN28": {
+      "name": "Universidade Federal de Juiz de Fora (UFJF)"
+   },
+   "IN29": {
+      "name": "Universidade Federal de Lavras (UFLA)"
+   },
+   "IN2A": {
+      "name": "Universidade Federal de Minas Gerais (UFMG)"
+   },
+   "IN2B": {
+      "name": "Universidade Federal de Ouro Preto (UFOP)"
+   },
+   "IN2C": {
+      "name": "Universidade Federal de São Carlos (UFSCar)"
+   },
+   "IN2D": {
+      "name": "Universidade Federal de São João del-Rei (UFSJ)"
+   },
+   "IN2E": {
+      "name": "Universidade Federal de São Paulo (UNIFESP)"
+   },
+   "IN2F": {
+      "name": "Universidade Federal de Uberlândia (UFU)"
+   },
+   "IN30": {
+      "name": "Universidade Federal de Viçosa (UFV)"
+   },
+   "IN31": {
+      "name": "Universidade Federal do ABC (UFABC)"
+   },
+   "IN32": {
+      "name": "Universidade Federal do Espírito Santo (UFES)"
+   },
+   "IN33": {
+      "name": "Universidade Federal do Estado do Rio de Janeiro (UNIRIO)"
+   },
+   "IN34": {
+      "name": "Universidade Federal do Rio de Janeiro (UFRJ)"
+   },
+   "IN35": {
+      "name": "Universidade Federal do Triângulo Mineiro (UFTM)"
+   },
+   "IN36": {
+      "name": "Universidade Federal dos Vales do Jequitinhonha e Mucuri (UFVJM)"
+   },
+   "IN37": {
+      "name": "Universidade Federal Fluminense (UFF)"
+   },
+   "IN38": {
+      "name": "Universidade Federal Rural do Rio de Janeiro (UFRRJ)"
+   },
+   "IN39": {
+      "name": "Universidade Municipal de São Caetano do Sul (USCS)"
+   },
+   "IN3A": {
+      "name": "Universidade Municipal de Taubaté (UNITAU)"
+   },
+   "IN3B": {
+      "name": "Universidade Virtual do Estado de São Paulo (UNIVESP)"
+   },
+   "IN3C": {
+      "name": "Universidade do Estado de Santa Catarina (UDESC)"
+   },
+   "IN3D": {
+      "name": "Universidade Estadual de Londrina (UEL)"
+   },
+   "IN3E": {
+      "name": "Universidade Estadual de Maringá (UEM)"
+   },
+   "IN3F": {
+      "name": "Universidade Estadual de Ponta Grossa (UEPG)"
+   },
+   "IN40": {
+      "name": "Universidade Estadual do Centro-Oeste (UNICENTRO)"
+   },
+   "IN41": {
+      "name": "Universidade Estadual do Norte do Paraná (UENP)"
+   },
+   "IN42": {
+      "name": "Universidade Estadual do Oeste do Paraná (UNIOESTE)"
+   },
+   "IN43": {
+      "name": "Universidade Estadual do Paraná (UNESPAR)"
+   },
+   "IN44": {
+      "name": "Universidade Estadual do Rio Grande do Sul (UERGS)"
+   },
+   "IN45": {
+      "name": "Universidade Federal da Fronteira do Sul (UFFS)"
+   },
+   "IN46": {
+      "name": "Universidade Federal da Integração Latino-Americana (UNILA)"
+   },
+   "IN47": {
+      "name": "Universidade Federal de Ciências da Saúde de Porto Alegre (UFCSPA)"
+   },
+   "IN48": {
+      "name": "Universidade Federal de Pelotas (UFPEL)"
+   },
+   "IN49": {
+      "name": "Universidade Federal de Santa Catarina (UFSC)"
+   },
+   "IN4A": {
+      "name": "Universidade Federal de Santa Maria (UFSM)"
+   },
+   "IN4B": {
+      "name": "Universidade Federal do Pampa (UNIPAMPA)"
+   },
+   "IN4C": {
+      "name": "Universidade Federal do Paraná (UFPR)"
+   },
+   "IN4D": {
+      "name": "Universidade Federal do Rio Grande (FURG)"
+   },
+   "IN4E": {
+      "name": "Universidade Federal do Rio Grande do Sul (UFRGS)"
+   },
+   "IN4F": {
+      "name": "Universidade Tecnológica Federal do Paraná (UTFPR)"
+   },
+   "IN50": {
+      "name": "Universidade Estadual do Amapá (UEAP)"
+   },
+   "IN51": {
+      "name": "Universidade do Estado do Amazonas (UEA)"
+   },
+   "IN52": {
+      "name": "Universidade do Estado do Pará (UEPA)"
+   },
+   "IN53": {
+      "name": "Universidade do Tocantins (UNITINS)"
+   },
+   "IN54": {
+      "name": "Universidade Estadual de Roraima (UERR)"
+   },
+   "IN55": {
+      "name": "Universidade Federal de Rondônia (UNIR)"
+   },
+   "IN56": {
+      "name": "Universidade Federal de Roraima (UFRR)"
+   },
+   "IN57": {
+      "name": "Universidade Federal do Acre (UFAC)"
+   },
+   "IN58": {
+      "name": "Universidade Federal do Amapá (UNIFAP)"
+   },
+   "IN59": {
+      "name": "Universidade Federal do Amazonas (UFAM)"
+   },
+   "IN5A": {
+      "name": "Universidade Federal do Oeste do Pará (UFOPA)"
+   },
+   "IN5B": {
+      "name": "Universidade Federal do Pará (UFPA)"
+   },
+   "IN5C": {
+      "name": "Universidade Federal do Tocantins (UFT)"
+   },
+   "IN5D": {
+      "name": "Universidade Federal Rural da Amazônia (UFRA)"
+   },
+   "IN5E": {
+      "name": "Universidade Federal do Sul e Sudeste do Pará (UNIFESSPA)"
+   },
+   "IN5F": {
+      "name": "Universidade de Brasília (UnB)"
+   },
+   "IN60": {
+      "name": "Universidade de Rio Verde (FESURV)"
+   },
+   "IN61": {
+      "name": "Universidade do Estado de Mato Grosso (UNEMAT)"
+   },
+   "IN62": {
+      "name": "Universidade Estadual de Goiás (UEG)"
+   },
+   "IN63": {
+      "name": "Universidade Estadual de Mato Grosso do Sul (UEMS)"
+   },
+   "IN64": {
+      "name": "Universidade Federal da Grande Dourados (UFGD)"
+   },
+   "IN65": {
+      "name": "Universidade Federal de Goiás (UFG)"
+   },
+   "IN66": {
+      "name": "Universidade Federal de Mato Grosso (UFMT)"
+   },
+   "IN67": {
+      "name": "Universidade Federal de Mato Grosso do Sul (UFMS)"
+   }
+}

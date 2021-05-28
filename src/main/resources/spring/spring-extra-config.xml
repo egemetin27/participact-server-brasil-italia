@@ -1,0 +1,42 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+        http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-4.1.xsd">
+    <task:annotation-driven executor="taskExecutor"/>
+    <task:executor id="taskExecutor" pool-size="1-20" queue-capacity="50"/>
+    <bean id="runScheduler" class="it.unibo.paserver.manteinance.RunSchedulerManteinance"/>
+
+    <task:scheduled-tasks>
+        <task:scheduled ref="runScheduler" method="runMailingQueue" fixed-delay="30000"/>
+        <!-- <task:scheduled ref="runScheduler" method="runMailingQueue" cron="0 0/10 * * * *" />-->
+    </task:scheduled-tasks>
+
+    <task:scheduled-tasks>
+        <!-- <task:scheduled ref="runScheduler" method="runPushingQueue" fixed-delay="10000" /> -->
+        <task:scheduled ref="runScheduler" method="runPushingQueue" cron="0 0/1 * * * *"/>
+    </task:scheduled-tasks>
+
+    <task:scheduled-tasks>
+        <task:scheduled ref="runScheduler" method="runCleanQueue" cron="0 0 1 * * *"/>
+    </task:scheduled-tasks>
+
+    <!--
+    <task:scheduled-tasks>
+       COMMENTAR A PRIMEIRA LINHA  <task:scheduled ref="runScheduler" method="runCguGetListaManifestacaoOuvidoria" fixed-delay="30000" />
+        <task:scheduled ref="runScheduler" method="runCguSoapListaManifestacaoOuvidoria" cron="0 0 * * * *"/>
+    </task:scheduled-tasks>
+    -->
+
+    <task:scheduled-tasks>
+        <!-- <task:scheduled ref="runScheduler" method="runCguRestListaManifestacaoOuvidoria" fixed-delay="30000"/> -->
+        <task:scheduled ref="runScheduler" method="runCguRestListaManifestacaoOuvidoria" cron="0 0/1 * * * *"/>
+    </task:scheduled-tasks>
+
+    <!--
+    <task:scheduled-tasks>
+        COMMENTAR A PRIMEIRA LINHA <task:scheduled ref="runScheduler" method="runMailingResendQueue" fixed-delay="10000" />
+        <task:scheduled ref="runScheduler" method="runMailingResendQueue" cron="0 0 * * * *" />
+    </task:scheduled-tasks>
+     -->
+</beans>

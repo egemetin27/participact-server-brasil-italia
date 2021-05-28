@@ -1,0 +1,565 @@
+ ALTER TABLE task ADD COLUMN emailbody text DEFAULT '';
+ ALTER TABLE task ADD COLUMN issendemail boolean DEFAULT false;
+ 
+ 2016-12-17
+ ALTER TABLE task ADD COLUMN emailsubject text DEFAULT '';
+ ALTER TABLE task ADD COLUMN hasphotos boolean DEFAULT false;
+ ALTER TABLE task ADD COLUMN hasquestionnaire boolean DEFAULT false; 
+ ALTER TABLE pushnotifications ADD COLUMN message text DEFAULT '';
+ ALTER TABLE fileupload ADD COLUMN filesource character  varying(255) DEFAULT '';
+ 
+ ALTER TABLE user_accounts ADD COLUMN unicodcourse character  varying(20) DEFAULT '';
+ ALTER TABLE user_accounts ADD COLUMN uniphase integer DEFAULT 0;
+ ALTER TABLE user_accounts ADD COLUMN unistatus character  varying(20) DEFAULT '';
+ ALTER TABLE user_accounts ADD COLUMN filesource character  varying(255) DEFAULT '';
+ 
+ 2017-09-12
+ ALTER TABLE systememail ADD COLUMN limitsending integer DEFAULT 500;
+ ALTER TABLE systememail ADD COLUMN limitperiod integer DEFAULT 1;
+ ALTER TABLE systememail ADD COLUMN limitper integer DEFAULT 0;
+ ALTER TABLE systememail ADD COLUMN limittime integer DEFAULT 86500;
+ ALTER TABLE systememail ADD COLUMN isprocessing integer DEFAULT 0;
+ 
+ ALTER TABLE mailing_logs ADD COLUMN userdevicepushtypeid character varying(255) COLLATE pg_catalog."default" DEFAULT NULL
+ 
+ 
+ 2017-11-23
+ ALTER TABLE pushnotifications ADD COLUMN ispublish integer DEFAULT 0;
+ UPDATE pushnotifications SET removed=1,ispublish=1 WHERE id > 0
+ 
+ ALTER TABLE user_list_push DROP COLUMN push_id;
+ ALTER TABLE user_list_push DROP COLUMN list_id;
+ 
+ 2018-01-12
+ 
+ ALTER TABLE mailing_logs ADD COLUMN qrcodetoken text DEFAULT '';
+ ALTER TABLE mailing_logs ADD COLUMN qrcodeused integer DEFAULT 0;
+ 
+ 2018-01-19
+ ALTER TABLE databattery ADD COLUMN batterylevel integer DEFAULT 0;
+ ALTER TABLE databattery ADD COLUMN batterystate integer DEFAULT 0; 
+ ALTER TABLE databattery DROP COLUMN batterylevel;
+ ALTER TABLE databattery DROP COLUMN batterystate;
+ 
+ ALTER TABLE datadevicenettraffic ADD COLUMN networkuptime integer DEFAULT 0;
+ 
+ ALTER TABLE datalocation ADD COLUMN altitude double precision DEFAULT 0.0;
+ ALTER TABLE datalocation ADD COLUMN horizontalaccuracy double precision DEFAULT 0.0;
+ ALTER TABLE datalocation ADD COLUMN verticalaccuracy double precision DEFAULT 0.0;
+ ALTER TABLE datalocation ADD COLUMN course double precision DEFAULT 0.0;
+ ALTER TABLE datalocation ADD COLUMN speed double precision DEFAULT 0.0;
+ ALTER TABLE datalocation ADD COLUMN floor double precision DEFAULT 0.0;
+ 
+ 2018-02-21
+ ALTER TABLE user_accounts ADD COLUMN isguest integer DEFAULT 0;
+ 
+ 2018-05-16
+ UPDATE public.issue_report c SET queryat = DATE(b.creationdate)
+ FROM issue_report AS a INNER JOIN issue_report AS b ON  b.id=a.id
+ WHERE c.id = a.id
+ 
+ ALTER TABLE task ADD COLUMN wppublishtext text DEFAULT '';
+ ALTER TABLE task ADD COLUMN wppublishpage boolean DEFAULT false;
+ ALTER TABLE task ADD COLUMN wppostdescription boolean DEFAULT false;
+ ALTER TABLE task ADD COLUMN wppostsensorlist boolean DEFAULT false;
+ ALTER TABLE task ADD COLUMN wppostcampaignstats boolean DEFAULT false;
+ 
+ 2018-09-11
+ ALTER TABLE issue_setting ADD COLUMN inapplereview integer DEFAULT 0;
+ 
+ 2018-09-13
+ ALTER TABLE user_accounts ADD COLUMN authorizecontact boolean DEFAULT false;
+ 
+ 2018-10-29
+ ALTER TABLE pushnotifications ADD COLUMN ismail boolean DEFAULT false;
+
+ 2019-01-02
+	CREATE TABLE public.ckan_celesc
+	(
+		id bigint NOT NULL,
+		referencia character varying(255) COLLATE pg_catalog."default",
+		classe character varying(255) COLLATE pg_catalog."default",
+		uc bigint,
+		logradouro text COLLATE pg_catalog."default",	
+		bairro text COLLATE pg_catalog."default",		
+		cep bigint,
+		consumo bigint,	
+		latitude double precision DEFAULT 0,
+		longitude double precision DEFAULT 0,	
+		creationdate timestamp without time zone NOT NULL,
+		queryat date,
+		querytime time without time zone,
+		removed integer NOT NULL,
+		updatedate timestamp without time zone NOT NULL,
+		CONSTRAINT ckan_celesc_pkey PRIMARY KEY (id)
+	)
+	WITH (
+		OIDS = FALSE
+	)
+	TABLESPACE pg_default;
+
+	ALTER TABLE public.ckan_celesc
+		OWNER to postgres;
+
+-- Index: idx_ckan_celesc_cep
+-- DROP INDEX public.idx_ckan_celesc_cep;
+CREATE INDEX idx_ckan_celesc_cep ON public.ckan_celesc USING btree (cep) TABLESPACE pg_default;
+		
+	-- Index: idx_ckan_celesc_uc
+	-- DROP INDEX public.idx_ckan_celesc_uc;
+	CREATE INDEX idx_ckan_celesc_uc ON public.ckan_celesc USING btree (uc) TABLESPACE pg_default;	
+ 
+
+		$scope.hashmap = [];
+		$scope.audienceSelector = false; 
+		
+2019-02-27
+
+alter table question add isrequired boolean default false;
+comment on column question.isrequired is 'Se eh obrigatorio responder a pergunta';
+alter table question add target_id bigint default 0;
+alter table question add target_order integer default -1;
+alter table question add isphoto boolean default false;
+comment on column question.isphoto is 'Se a resposta sera uma foto';
+alter table question add number_photos integer default 0;
+		
+alter table actionquestionaire add isrepeat boolean default false;
+comment on column actionquestionaire.isrepeat is 'Se o questionario ira repetir durante o periodo da campanha';
+
+alter table closedanswer add target_id bigint default 0;
+alter table closedanswer add target_order int default -1;
+
+alter table actionquestionaire_response add accuracy double precision default 0.0;
+alter table actionquestionaire_response add latitude double precision default 0.0;
+alter table actionquestionaire_response add longitude double precision default 0.0;
+alter table actionquestionaire_response add altitude double precision default 0.0;
+alter table actionquestionaire_response add provider varchar(255) default 'N/A';
+alter table actionquestionaire_response add isphoto boolean default false;
+	
+2019-03-04
+alter table actionquestionaire_response add ipaddress varchar(255) default '::0';
+
+alter table storage_file add accuracy double precision default 0.0;
+alter table storage_file add latitude double precision default 0.0;
+alter table storage_file add longitude double precision default 0.0;
+alter table storage_file add altitude double precision default 0.0;
+alter table storage_file add provider varchar(255) default 'N/A';
+alter table storage_file add ipaddress varchar(255) default '::0';
+		
+2019-03-25
+alter table task add wppostquestionnaire boolean default false;		
+		
+2019-04-09
+create table cgu_orgaos_siorg
+(
+    codorg       bigint not null constraint cgu_orgaos_siorg_pk primary key,
+    nomorgao     text,
+    creationdate timestamp,
+    updatedate   timestamp,
+    removed      boolean default false
+);
+
+alter table cgu_orgaos_siorg owner to postgres;
+create unique index cgu_orgaos_siorg_codorg_uindex on cgu_orgaos_siorg (codorg);
+	
+2019-05-03
+
+alter table issue_report
+	add siorg_id bigint default 0;
+
+alter table issue_report
+	add isombudsman boolean default false;
+
+alter table issue_report
+	add isqueued boolean default false;
+
+alter table issue_report
+	add isfail boolean default false;
+
+alter table issue_report
+	add pub_protocol text;
+
+alter table issue_report
+	add pub_url text;
+
+alter table issue_report
+	add pub_message text;
+
+alter table issue_report
+	add pub_email text default null;
+
+2019-05-07
+	
+alter table issue_report
+	add pub_date timestamp default null;
+	
+	
+2019-05-31
+alter table cgu_manifestacao_resposta add dataresposta timestamp default null;	
+alter table issue_report add isresolved boolean default false;
+
+2019-07-04
+alter table task add inviteqrcodetoken varchar(50) default null;
+
+2019-07-11
+alter table cgu_ouvidorias_v4 add SigUf varchar default null;
+alter table cgu_ouvidorias_v4 add descUf varchar default null;
+
+alter table issue_report add priv_protocol varchar default null;
+alter table issue_report add priv_code_access varchar default null;
+alter table issue_report add priv_rel_self text default null;
+alter table issue_report add priv_rel_eouv text default null;
+alter table cgu_manifestacao_resposta add IdRespostaManifestacao int default null;
+alter table cgu_manifestacao_resposta add IdTipoRespostaManifestacao int default null;
+
+2019-07-16
+alter table user_accounts add hasAllowOmbudsman boolean default false;
+alter table cgu_ouvidorias_v4 add hasAllowOmbudsman boolean default false;
+
+create table reverse_geocoding
+(
+	id bigserial not null
+		constraint reverse_geocoding_pk
+			primary key,
+	place_id bigint,
+	licence text,
+	lat double precision,
+	lon double precision,
+	category varchar,
+	display_name varchar,
+	address_road varchar,
+	address_neighbourhood varchar,
+	address_city_district varchar,
+	address_city varchar,
+	address_county varchar,
+	address_state_district varchar,
+	address_state varchar,
+	address_postcode varchar,
+	address_country varchar,
+	address_country_code varchar,
+	bb_north_lat double precision,
+	bb_north_lng double precision,
+	bb_south_lat double precision,
+	bb_south_lng double precision,
+	creationdate timestamp,
+	updatedate timestamp,
+	removed boolean default false
+);
+
+comment on table reverse_geocoding is 'Consultas nas APIs';
+
+alter table reverse_geocoding owner to postgres;
+
+create table cgu_ibge_geo
+(
+	id bigserial not null
+		constraint cgu_ibge_geo_pk
+			primary key,
+	codmun7 bigint,
+	codmun6 integer,
+	cd_geocodigo varchar,
+	tipo char(20),
+	cd_geocodba varchar,
+	nm_bairro varchar,
+	cd_geocodsd varchar,
+	nm_subdistrito varchar,
+	cd_geocodds varchar,
+	nm_distrito varchar,
+	cd_geocodmu varchar,
+	nm_municipio varchar,
+	nm_micro varchar,
+	nm_meso varchar,
+	nm_uf varchar,
+	cd_nivel varchar,
+	cd_categoria varchar,
+	nm_categoria varchar,
+	nm_localidade varchar,
+	long double precision,
+	lat double precision,
+	alt double precision,
+	creationdate timestamp,
+	updatedate timestamp,
+	removed boolean default false
+);
+
+comment on column cgu_ibge_geo.cd_geocodigo is 'Geocódigo do setor (15 dígitos numéricos)
+';
+
+comment on column cgu_ibge_geo.tipo is 'Classificação de Tipo (Urbano ou Rural, 6 dígitos alfa-numéricos)
+';
+
+comment on column cgu_ibge_geo.cd_geocodba is 'Geocódigo do bairro (12 dígitos numéricos)
+';
+
+comment on column cgu_ibge_geo.nm_bairro is 'Nome do bairro
+';
+
+comment on column cgu_ibge_geo.cd_geocodsd is 'Geocódigo do subdistrito (11 dígitos numéricos)
+';
+
+comment on column cgu_ibge_geo.nm_subdistrito is 'Nome do subdistrito
+';
+
+comment on column cgu_ibge_geo.cd_geocodds is 'Geocódigo do distrito (9 dígitos numéricos)
+';
+
+comment on column cgu_ibge_geo.nm_distrito is 'Nome do distrito
+';
+
+comment on column cgu_ibge_geo.cd_geocodmu is 'Geocódigo do Município (7 dígitos numéricos)
+';
+
+comment on column cgu_ibge_geo.nm_municipio is 'Nome do Município
+';
+
+comment on column cgu_ibge_geo.nm_micro is 'Nome Micro-região
+';
+
+comment on column cgu_ibge_geo.nm_meso is 'Nome Meso-região
+';
+
+comment on column cgu_ibge_geo.nm_uf is 'Nome da UF
+';
+
+comment on column cgu_ibge_geo.cd_nivel is 'Código do Nível da Localidade
+';
+
+comment on column cgu_ibge_geo.cd_categoria is 'Código da Categoria da Localidade
+';
+
+comment on column cgu_ibge_geo.nm_categoria is 'Nome da Categoria da Localidade
+
+';
+
+comment on column cgu_ibge_geo.nm_localidade is 'Nome da Localidade
+';
+
+comment on column cgu_ibge_geo.long is 'Longitude da Localidade em grau decimal
+';
+
+comment on column cgu_ibge_geo.lat is 'Latitude da Localidade em grau decimal
+';
+
+comment on column cgu_ibge_geo.alt is 'Altitude da Localidade, oriunda de SRTM em metros
+';
+
+alter table cgu_ibge_geo owner to postgres;
+
+create index cgu_ibge_geo_codmun6_index
+	on cgu_ibge_geo (codmun6);
+
+create index cgu_ibge_geo_codmun7_index
+	on cgu_ibge_geo (codmun7);
+
+create unique index cgu_ibge_geo_id_uindex
+	on cgu_ibge_geo (id);
+
+create table cgu_ibge_mun
+(
+	id bigserial not null
+		constraint cgu_ibge_pk
+			primary key,
+	codmun7 integer,
+	codmun6 integer,
+	nomemun varchar,
+	coduf char(20),
+	siglauf varchar(20),
+	nomeuf varchar,
+	codur_n1 integer,
+	divur_n1 varchar,
+	codur_n2 integer,
+	divur_n2 varchar,
+	divur_n2_sub varchar,
+	codur_n3 integer,
+	divur_n3 varchar,
+	cod_n1_polo integer,
+	n1_tipo char(20),
+	cod_n2_polo integer,
+	n2_tipo char(20),
+	cod_n3_polo integer,
+	n3_tipo char(20),
+	updatedate timestamp,
+	creationdate timestamp,
+	removed boolean default false,
+	geo_tipo char(20),
+	geo_lat double precision,
+	geo_long double precision,
+	geo_alt double precision
+);
+
+comment on column cgu_ibge_mun.codmun7 is 'Geocódigo IBGE do município com sete dígitos em formato de texto
+';
+
+comment on column cgu_ibge_mun.codmun6 is 'Geocódigo IBGE do município com seis dígitos em formato de texto
+';
+
+comment on column cgu_ibge_mun.nomemun is 'Nome do município
+';
+
+comment on column cgu_ibge_mun.coduf is 'Geocódigo IBGE de Unidade da Federação
+';
+
+comment on column cgu_ibge_mun.siglauf is 'Sigla da Unidade da Federação
+';
+
+comment on column cgu_ibge_mun.nomeuf is 'Nome da Unidade da Federação
+';
+
+comment on column cgu_ibge_mun.codur_n1 is 'Geocódigo IBGE das Regiões Ampliadas de Articulação Urbana - Classificação final resultante da calibração entre níveis. 
+';
+
+comment on column cgu_ibge_mun.divur_n1 is 'Nome das Regiões Ampliadas de Articulação Urbana - Classificação final resultante da calibração entre níveis
+';
+
+comment on column cgu_ibge_mun.codur_n2 is 'Geocódigo IBGE das Regiões Intermediárias de Articulação Urbana - Classificação final resultante da calibração entre níveis.
+';
+
+comment on column cgu_ibge_mun.divur_n2 is 'Nome das Regiões Intermediárias de Articulação Urbana - Classificação final resultante da calibração entre níveis
+';
+
+comment on column cgu_ibge_mun.divur_n2_sub is 'Nome das Regiões Intermediárias de Articulação Urbana subdivididas devido à diferença dos centros de influência de nível 1 - Classificação final resultante da calibração entre níveis
+';
+
+comment on column cgu_ibge_mun.codur_n3 is 'Geocódigo IBGE das Regiões Imediatas de Articulação Urbana - Classificação final resultante da primeira regra.
+';
+
+comment on column cgu_ibge_mun.divur_n3 is 'Nome das Regiões Imediatas de Articulação Urbana - Classificação final resultante da primeira regra
+';
+
+comment on column cgu_ibge_mun.cod_n1_polo is 'Geocodigo do IBGE de 6 dígitos do município pólo da Região Ampliada de Articulação Urbana. 
+';
+
+comment on column cgu_ibge_mun.n1_tipo is 'Identifica se o município é o polo da Região Ampliada de Articulação Urbana (P1) ou é um dos demais municípios que compõe a região (DM1). 
+';
+
+comment on column cgu_ibge_mun.cod_n2_polo is 'Geocodigo IBGE de 6 dígitos do município pólo da Região Ampliada de Articulação Urbana. 
+';
+
+comment on column cgu_ibge_mun.n2_tipo is 'Identifica se o município é o polo da Região Ampliada de Articulação Urbana (P2) ou é um dos demais municípios que compõe a região (DM2). 
+';
+
+comment on column cgu_ibge_mun.cod_n3_polo is 'Geocodigo IBGE de 6 dígitos do município pólo da Região Ampliada de Articulação Urbana. 
+';
+
+comment on column cgu_ibge_mun.n3_tipo is 'Identifica se o município é o polo da Região Ampliada de Articulação Urbana (P2) ou é um dos demais municípios que compõe a região (DM2). 
+';
+
+comment on column cgu_ibge_mun.geo_tipo is 'Classificação de Tipo (Urbano ou Rural, 6 dígitos alfa-numéricos)
+';
+
+comment on column cgu_ibge_mun.geo_lat is 'Latitude da Localidade em grau decimal
+';
+
+comment on column cgu_ibge_mun.geo_long is 'Longitude da Localidade em grau decimal
+';
+
+comment on column cgu_ibge_mun.geo_alt is 'Altitude da Localidade, oriunda de SRTM em metros
+';
+
+alter table cgu_ibge_mun owner to postgres;
+
+create unique index cgu_ibge_id_uindex
+	on cgu_ibge_mun (id);
+
+create index cgu_ibge_codmun7_index
+	on cgu_ibge_mun (codmun7);
+
+create index cgu_ibge_codmun6_index
+	on cgu_ibge_mun (codmun6);
+
+create table issue_subcategory_has_relationship
+(
+	issue_subcategory_id bigint not null,
+	relationship_id bigint not null,
+	id bigserial not null
+		constraint issue_subcategory_has_relationship_pk
+			primary key
+);
+
+alter table issue_subcategory_has_relationship owner to postgres;
+
+create index issue_subcategory_has_relationship_issue_subcategory_id_index
+	on issue_subcategory_has_relationship (issue_subcategory_id);
+
+create index issue_subcategory_has_relationship_relationship_id_index
+	on issue_subcategory_has_relationship (relationship_id);
+
+2019-07-29
+alter table issue_report add formatted_city varchar default null;
+alter table issue_report add file_counter int default 0; 
+comment on column issue_report.file_counter is 'Total de arquivos anexados (fotos/videos/audios) ao relato pelo usuario no app';
+
+
+2019-07-30
+alter table issue_report add optionalUserName varchar default null;
+alter table issue_report add optionalUserEmail varchar default null;
+alter table issue_report add gpsInfo varchar default null;
+
+create table cgu_crontab
+(
+	id bigserial not null
+		constraint cgu_crontab_pk
+			primary key,
+	hh smallint,
+	ss smallint,
+	deliverydate timestamp,
+	creationdate timestamp,
+	updatedate timestamp
+);
+
+comment on table cgu_crontab is 'Define o tempo de sincronizacao com a CGU';
+comment on column cgu_crontab.hh is 'hora(0-23)';
+comment on column cgu_crontab.ss is 'dia_da_semana(0-7)';
+alter table cgu_crontab owner to postgres;
+alter table issue_report add ombudsman_name text default null;
+
+
+2019-08-13
+alter table issue_report add isgeocode boolean default false;
+
+
+------------------ XX ------------------		
+ SELECT 
+	ST_X(geom2),
+	ST_Y(geom2), 
+	ST_AsText(geom2), 
+	ST_Srid(geom),
+	ST_GeometryType(geom), 
+	ST_Y(ST_Centroid(st_transform((geom),4326))), 
+	ST_X(ST_Centroid(st_transform((geom),4326))), 
+	st_asText(ST_Envelope(st_transform((geom),4326))) 
+FROM ckan_comcap_plan_bairro LIMIT 5;
+ 
+ 
+ echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ xenial main" |      tee /etc/apt/sources.list.d/azure-cli.list
+ 
+ 
+ ogr2ogr -f PostgreSQL PG:dbname=test1 -progress -nlt PROMOTE_TO_MULTI /home/participact/nedata/ne_110m_admin_0_countries.shp
+
+ 
+SELECT label, ST_Y(ST_Centroid(geom)) as latitude FROM ckan_comcap_plan_bairro ORDER BY latitude DESC LIMIT 10;		
+
+-- 2019-12-23 -- Claudio
+alter table issue_category add enabled boolean default true;
+alter table issue_category add urlasset_light text default null;
+
+alter table issue_subcategory add enabled boolean default true;
+alter table issue_subcategory add level int default 1;
+alter table issue_subcategory add parent_id bigint default 0;
+alter table issue_subcategory add children boolean default false;
+alter table issue_subcategory add urlasset_light text default null;
+
+-- 2020-01-21 -- Claudio
+alter table issue_report add parent_id bigint default 0;
+alter table issue_report add issecondary boolean default false;
+
+-- 2020-02-04 -- Claudio
+alter table task add enabled boolean default true;
+alter table closedanswer add amount int default 0;
+
+-- 2021-03-09 -- Claudio
+alter table account add privilege2 integer default 0;
+alter table account add municipality varchar(45) default null;
+comment on column account.municipality is 'Municipio de consulta ou restricao';
+
+

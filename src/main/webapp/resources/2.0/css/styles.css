@@ -1,0 +1,278 @@
+@CHARSET "ISO-8859-1";
+
+* {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.page-header.navbar .page-logo .logo-default {
+    width: 130px;
+}
+
+#pa-language {
+    padding-left: 20px;
+}
+
+/*#map-canvas {height: 400px;}*/
+div#map-canvas {
+    height: 400px;
+}
+
+.margin-bottom-10 {
+    margin-bottom: 10px !important;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px !important;
+}
+
+.margin-bottom-30 {
+    margin-bottom: 30px !important;
+}
+
+.margin-bottom-40 {
+    margin-bottom: 40px !important;
+}
+
+.margin-top-50-perc {
+    padding-top: 50%;
+}
+
+.margin-left-10 {
+    margin-left: 10px !important;
+}
+
+.margin-right-10 {
+    margin-right: 10px !important;
+}
+
+.qz-pointer {
+    cursor: pointer !important;
+}
+
+.datepicker .active {
+    background-color: #fff !important;
+}
+
+.datepicker .active:hover {
+    background-color: #fff !important;
+}
+
+.border-left-sold-1 {
+    border-left: solid thin #fff !important;
+}
+
+.pallete-blue-500 {
+    background-color: #2196F3 !important;
+    color: #fff !important;
+}
+
+.SENSING_MOST {
+    border-color: #8bb4e7 !important;
+}
+
+.BG_SENSING_MOST {
+    background-color: #8bb4e7 !important;
+}
+
+.PHOTO {
+    border-color: #f0868e !important;
+}
+
+.BG_PHOTO {
+    background-color: #f0868e !important;
+}
+
+.QUESTIONNAIRE {
+    border-color: #58d0da !important;
+}
+
+.BG_QUESTIONNAIRE {
+    background-color: #58d0da !important;
+}
+
+.ACTIVITY_DETECTION {
+    border-color: #f3cc31 !important;
+}
+
+.BG_ACTIVITY_DETECTION {
+    background-color: #f3cc31 !important;
+}
+
+.NOTIFICATION_AREA {
+    border-color: #263238 !important;
+    background: #ECEFF1 !important;
+}
+
+.ACTIVATION_AREA {
+    border-color: #9E9E9E !important;
+    background: #F5F5F5 !important;
+}
+
+.ASSIGN {
+    border-color: #009688 !important;
+    background: #E0F2F1 !important;
+}
+
+.floating-action-button {
+    position: fixed;
+    top: 32%;
+    right: 30px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.myHandle {
+    cursor: move;
+}
+
+.padding-top-bottom-10 {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.padding-left-0 {
+    padding-left: 0px !important;
+}
+
+.ng-map {
+    width: 100%;
+    height: 500px !important;
+}
+
+.ng-map-full {
+    width: 100%;
+    height: calc(80vh - 1em) !important;
+}
+
+.ng-map-h-50 {
+    width: 100%;
+    height: calc(60vh - 20em) !important;
+}
+
+.wordwrap {
+    white-space: pre-wrap; /* CSS3 */
+    white-space: -moz-pre-wrap; /* Firefox */
+    white-space: -pre-wrap; /* Opera <7 */
+    white-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* IE */
+}
+
+.has-error .bootstrap-select .btn {
+    border-color: #F44336;
+}
+
+.form-control {
+    border: 1px solid #424242;
+}
+
+.bootstrap-select .btn {
+    border: 1px solid #424242;
+}
+
+.bdp-input {
+    border: 1px solid #424242;
+}
+
+.bootstrap-select :not([class*=col-]) :not([class*=form-control]) :not(.input-group-btn) {
+    width: 100%;
+}
+
+.dropdown-menu {
+    z-index: 9999;
+}
+
+.hiper-small {
+    font-size: x-small;
+}
+
+.full-width {
+    display: block;
+}
+
+.padding-top-10 {
+    padding-top: 10px;
+}
+
+.padding-bottom-10 {
+    padding-bottom: 10px;
+}
+
+span.btn.btn-default.form-control.ui-select-toggle {
+    min-width: 300px;
+}
+
+/* #### chart #### */
+.chartdiv {
+    height: 500px;
+}
+
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+    /* some CSS here */
+}
+
+/* #### Mobile Phones Landscape #### */
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+    /* some CSS here */
+}
+
+/* #### Mobile Phones Portrait or Landscape #### */
+@media screen and (max-device-width: 640px) {
+    /* some CSS here */
+}
+
+/* #### iPhone 4+ Portrait or Landscape #### */
+@media screen and (min-device-width: 320px) and
+(-webkit-min-device-pixel-ratio: 2) {
+    /* some CSS here */
+}
+
+/* #### iPhone 5 Portrait or Landscape #### */
+@media ( device-height: 568px) and (device-width: 320px) and
+(-webkit-min-device-pixel-ratio: 2) {
+    /* some CSS here */
+}
+
+/* #### iPhone 6 and 6 plus Portrait or Landscape #### */
+@media ( min-device-height: 667px) and (min-device-width: 375px) and
+(-webkit-min-device-pixel-ratio: 3) {
+    /* some CSS here */
+}
+
+/* #### Tablets Portrait or Landscape #### */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    /* some CSS here */
+}
+
+/* #### Desktops #### */
+@media screen and (min-width: 1024px) {
+    .vertical-button {
+        vertical-align: middle;
+        margin-top: 50%;
+    }
+}
+
+.ats-switch {
+    height: 34px;
+}
+
+.ats-switch .switch-off {
+    height: 34px;
+}
+
+.ats-switch .switch-on {
+    height: 34px;
+}
+
+.pa-data-list {
+    z-index: 1;
+    position: inherit;
+}
+
+#pa-issue-participant-list, #pa-issue-subcategory-list, #pa-issue-ombudsman-list, #pa-issue-siorg-list {
+    position: absolute;
+}

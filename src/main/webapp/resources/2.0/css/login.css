@@ -1,0 +1,47 @@
+@CHARSET "ISO-8859-1";
+
+*{
+	font-family: 'Roboto Condensed', sans-serif;	
+}
+
+.pa-footer-break{
+	display: block;
+}
+
+.login {
+	/*background-image: url("../../1.0/img/1.jpg");
+	background-color: #464646;*/
+	background-color: #3d3d3d !important;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;	
+}
+
+.login .logo {
+    max-width: 400px;
+}
+
+.login .copyright {
+    text-align: center;
+    padding: 10px 10px 0px 10px;
+    color: black;
+    font-size: 13px;
+}
+.forget-form {
+	display: block !important;
+}
+
+@media only screen and (max-width: 767px) {
+	.login {
+		background-image: url("../../1.0/img/1.jpg");
+	}
+}
+
+.copyright-pallete {
+	margin: auto;
+	width: 400px;
+	overflow: hidden;
+	position: relative;
+	background-color: rgba(178, 223, 219, .8);
+}

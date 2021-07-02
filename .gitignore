@@ -19,7 +19,6 @@ src-bkp/*
 .idea
 .project
 .settings
-.gradle
 .classpath
 fabio.classpath
 settings-org.eclipse.wst.common.component

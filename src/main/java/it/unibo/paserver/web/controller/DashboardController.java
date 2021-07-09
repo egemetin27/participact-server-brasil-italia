@@ -28,7 +28,6 @@ import com.google.common.collect.ListMultimap;
 
 import br.com.bergmannsoft.utils.Useful;
 import br.com.bergmannsoft.utils.Validator;
-import sun.misc.FloatingDecimal;
 
 /**
  * Handles requests for the application home page.

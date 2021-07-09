@@ -129,7 +129,7 @@ public class Task implements Serializable {
     @Column(name = "copyId")
     private Long copyId = 0L;
 
-    @Column(columnDefinition = "inviteQrCodeToken", nullable = true)
+    @Column(columnDefinition = "VARCHAR(50)", nullable = true)
     private String inviteQrCodeToken = null;
 
     @JsonProperty("dt_start")

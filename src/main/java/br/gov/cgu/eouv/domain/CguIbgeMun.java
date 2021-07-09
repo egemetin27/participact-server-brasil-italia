@@ -31,7 +31,7 @@ public class CguIbgeMun {
     @Column(name = "codmun6")
     private Integer codmun6;
     @Basic
-    @Column(name = "nomemun", length = -1)
+    @Column(name = "nomemun")
     private String nomemun;
     @Basic
     @Column(name = "coduf", length = 20)
@@ -40,28 +40,28 @@ public class CguIbgeMun {
     @Column(name = "siglauf", length = 20)
     private String siglauf;
     @Basic
-    @Column(name = "nomeuf", length = -1)
+    @Column(name = "nomeuf")
     private String nomeuf;
     @Basic
     @Column(name = "codur_n1")
     private Integer codurN1;
     @Basic
-    @Column(name = "divur_n1", length = -1)
+    @Column(name = "divur_n1")
     private String divurN1;
     @Basic
     @Column(name = "codur_n2")
     private Integer codurN2;
     @Basic
-    @Column(name = "divur_n2", length = -1)
+    @Column(name = "divur_n2")
     private String divurN2;
     @Basic
-    @Column(name = "divur_n2_sub", length = -1)
+    @Column(name = "divur_n2_sub")
     private String divurN2Sub;
     @Basic
     @Column(name = "codur_n3")
     private Integer codurN3;
     @Basic
-    @Column(name = "divur_n3", length = -1)
+    @Column(name = "divur_n3")
     private String divurN3;
     @Basic
     @Column(name = "cod_n1_polo")

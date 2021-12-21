@@ -1,7 +1,9 @@
 /bin/
-/build
-/out
-
+/build/
+/build/*
+build/
+build*
+/build*
 lib/*
 libs/*
 out/*
@@ -22,3 +24,6 @@ fabio.classpath
 settings-org.eclipse.wst.common.component
 settings-org.eclipse.wst.common.project.facet.core.xml
 participact-server-v2.log
+*.iml
+!src/main/webapp/resources/2.0/assets/bower_components/ngmap/build/
+!src/main/webapp/resources/2.0/assets/bower_components/angular-loading-bar/build/

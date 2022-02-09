@@ -298,7 +298,7 @@ public class Validator {
      */
     public static boolean isValidPassword(String str) {
         if (!isEmptyString(str)) {
-            Pattern pattern = Pattern.compile("^[A-Za-z0-9_@#$%&*?!.]{8,40}$");
+            Pattern pattern = Pattern.compile("^[A-Za-z0-9_@#$%&*?!.]{6,40}$");
             Matcher matcher = pattern.matcher(str);
             return matcher.matches();
         }

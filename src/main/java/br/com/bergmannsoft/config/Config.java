@@ -42,8 +42,8 @@ public class Config {
     public static final String FFMPEG_CMD_FLAC = FFMPEG_SCRIPT_BIN + " -y -i %s -f flac 22050 %s";
     // ####################### ####################### #######################
     // ####################### ARQUIVOS
-    public static final String PRODUCTION_STORAGE_TEMP = "/tmp/"; // <---- PROD
-//        public static final String PRODUCTION_STORAGE_TEMP = "/temp/"; //<---- LOCALHOST
+//    public static final String PRODUCTION_STORAGE_TEMP = "/tmp/"; // <---- PROD
+    public static final String PRODUCTION_STORAGE_TEMP = "/temp/"; //<---- LOCALHOST
     public static final String PRODUCTION_STORAGE_MEDIA = "/var/www/vhosts/participact-media-service/"; // <---- PROD
     public static final String PRODUCTION_STORAGE_MEDIA_URL = "http://media.participact.com.br"; // <---- PROD
     public static final String PRODUCTION_STORAGE_ACCOUNTNAME = "CONFIDENTIAL_INFORMATION";

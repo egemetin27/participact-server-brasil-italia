@@ -3,7 +3,7 @@ configurations {
 }
 
 
-import java.text.SimpleDateFormat
+//import java.text.SimpleDateFormat
 
 apply plugin: 'base'
 apply plugin: 'war'
@@ -247,8 +247,8 @@ task copyToLib(type: Copy) {
     from configurations.runtime
 }
 
-def getCurrentTimestamp() {
+/*def getCurrentTimestamp() {
     Date today = new Date()
     SimpleDateFormat df = new SimpleDateFormat("yyyyMMddhhmm")
     return df.format(today)
-}
+}*/

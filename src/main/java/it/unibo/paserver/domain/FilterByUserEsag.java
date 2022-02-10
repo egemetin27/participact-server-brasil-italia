@@ -13,7 +13,7 @@ import br.com.bergmannsoft.utils.Validator;
 public enum FilterByUserEsag {
 	FILTER_NAME("Nome"), 
 	FILTER_BIRTHDATE("Data Nascimento"), 
-	FILTER_GENDER("Gênero"), 
+	FILTER_GENDER("Gï¿½nero"), 
 	FILTER_EMAIL("Email"),  
 	FILTER_CONTACTPHONENUMBER("Fone"),
 	FILTER_HOMEPHONENUMBER("Cel"),

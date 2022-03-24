@@ -13,8 +13,8 @@ public class Config {
     public static final String PRODUCTION_GEO_LAT = "-27.586347";
     public static final String PRODUCTION_GEO_LNG = "-48.502900";
     public static final String PRODUCTION_URL = "http://painel.participact.com.br/";
-    //public static final String PRODUCTION_HOST = "/v2/";
-    public static final String PRODUCTION_HOST = "http://localhost:8080/participact-server/";
+    public static final String PRODUCTION_HOST = "http://localhost:8080/v2/";
+    //public static final String PRODUCTION_HOST = "http://localhost:8080/participact-server/";
     public static final String PRODUCTION_RESOURCES = "/resources";
     public static final String PRODUCTION_RESOURCES_FILES = PRODUCTION_RESOURCES + "/public/file";
     public static final String PRODUCTION_RESOURCES_IMGS = PRODUCTION_RESOURCES + "/public/img";
